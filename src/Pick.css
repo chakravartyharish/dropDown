@@ -1,0 +1,136 @@
+.Root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Root__header {
+  text-align: center;
+}
+
+.Root__content {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Root__separator {
+  width: 70%;
+  height: 1px;
+  background-color: black;
+}
+
+.Root__select {
+  margin: 2rem;
+}
+
+.box {
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+  position: relative;
+  align-items: center;
+  gap: 8px;
+  width: 260px;
+  min-height: 24px;
+  border: 1px solid #777;
+  display: flex;
+}
+
+.id {
+  flex-grow: 1;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.erase-button {
+  cursor: pointer;
+  padding: 0;
+  font-size: 20px;
+  background: none;
+  color: #777;
+  border: none;
+  outline: none;
+}
+
+.erase-button:focus,
+.erase-button:hover {
+  color: #333;
+}
+
+.partition {
+  width: 1.4px;
+  background-color: rgb(195, 57, 57);
+  align-self: stretch;
+}
+
+.asterisk {
+  border: 4px solid transparent;
+  border-top-color: rgb(173, 35, 35);
+  translate: 0 25%;
+}
+
+.choices {
+  overflow-y: auto;
+  border: 1px solid #777;
+  border-radius: 4px;
+  width: 100%;
+  left: 0;
+  top: calc(100% + 4px);
+  background-color: white;
+  z-index: 100;
+  padding: 0;
+  list-style: none;
+  display: none;
+  max-height: 200px;
+  position: absolute;
+  margin: 0;
+}
+
+.choices.display {
+  display: block;
+}
+
+.choice {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.choice.picked {
+  background-color: hsl(200, 100%, 70%);
+}
+
+.choice.highlighted {
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+}
+
+.choice-pin {
+  display: flex;
+  align-items: center;
+  border: 1px solid #777;
+  border-radius: 4px;
+  padding: 1px 4px;
+  gap: 4px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+}
+
+.choice-pin:hover,
+.choice-pin:focus {
+  background-color: hsl(116, 100%, 90%);
+  border-color: hsl(262, 100%, 50%);
+}
+
+.choice-pin:hover > .delete-button,
+.choice-pin:focus > .delete-button {
+  color: hsl(248, 100%, 50%);
+}
+
+.choice-pin > .remove-btn {
+  font-size: 10px;
+  color: #777;
+}
